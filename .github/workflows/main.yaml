@@ -43,3 +43,4 @@ jobs:
           
       - name: Distribute app to Beta track
         run: bundle exec fastlane beta
+        
