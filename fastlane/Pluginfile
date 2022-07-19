@@ -2,4 +2,7 @@
 #
 # Ensure this file is checked in to source control!
 
+
+gem 'fastlane-plugin-ruby'
+
 #gem 'fastlane-plugin-firebase_app_distribution'
