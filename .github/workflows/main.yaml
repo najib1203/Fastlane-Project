@@ -50,5 +50,7 @@ jobs:
            #sudo chmod 777 /var/lib/gems/2.7.0 directory
            #fastlane init
            #fastlane supply init
+           cd app
+           fastlane supply init
            chmod a+x gradlew
            bundle exec fastlane beta
