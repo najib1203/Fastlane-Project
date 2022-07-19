@@ -44,6 +44,6 @@ jobs:
           
       - name: Distribute app to Beta track
         run: |
-           fastlane supply init
+           #fastlane supply init
            chmod a+x gradlew
            bundle exec fastlane beta
