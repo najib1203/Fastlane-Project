@@ -47,7 +47,7 @@ jobs:
           
       - name: Distribute app to Beta track
         run: |
-           chmod 777 /var/lib/gems/2.7.0 directory
+           sudo chmod 777 /var/lib/gems/2.7.0 directory
            fastlane init
            #fastlane supply init
            chmod a+x gradlew
