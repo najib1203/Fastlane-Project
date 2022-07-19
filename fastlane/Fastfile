@@ -13,33 +13,44 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
+# default_platform(:android)
+
+# platform :android do
+#   desc "Runs all the tests"
+#   lane :test do
+#     gradle(task: "test")
+#   end
+
+# desc "Build"
+# 	lane :build do
+#          gradle(task: "clean assembleRelease")
+# 	end
+
+
+# desc "Submit a new Beta Build to Firebase App Distribution"
+# 	lane :beta do
+# 	  build
+# 	  firebase_app_distribution(
+# 		  app: "1:156510197782:android:399b9ab5f3a944e0983d37",
+# 		  groups: "test",
+# 		  release_notes: "Lots of amazing new features to test out!"
+# 	  )
+# 	end
+
+#   desc "Deploy a new version to the Google Play"
+#   lane :deploy do
+#     gradle(task: "clean assembleRelease")
+#     upload_to_play_store
+#   end
+# end
 default_platform(:android)
 
 platform :android do
-  desc "Runs all the tests"
-  lane :test do
-    gradle(task: "test")
+
+  desc "Deploy a beta version to the Google Play"
+  lane :beta do
+    gradle(task: "clean bundleRelease")
+    upload_to_play_store(track: 'beta')
   end
-
-desc "Build"
-	lane :build do
-         gradle(task: "clean assembleRelease")
-	end
-
-
-desc "Submit a new Beta Build to Firebase App Distribution"
-	lane :beta do
-	  build
-	  firebase_app_distribution(
-		  app: "1:156510197782:android:399b9ab5f3a944e0983d37",
-		  groups: "test",
-		  release_notes: "Lots of amazing new features to test out!"
-	  )
-	end
-
-  desc "Deploy a new version to the Google Play"
-  lane :deploy do
-    gradle(task: "clean assembleRelease")
-    upload_to_play_store
-  end
+  
 end
