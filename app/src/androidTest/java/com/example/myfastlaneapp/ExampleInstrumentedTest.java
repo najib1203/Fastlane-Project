@@ -1,4 +1,4 @@
-package com.example.myfastlaneapp;
+package com.app.fastlane;
 
 import android.content.Context;
 
