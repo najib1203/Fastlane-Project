@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:156510197782:android:399b9ab5f3a944e0983d37",
         "android_client_info": {
-          "package_name": "com.example.myfastlaneapp"
+          "package_name": "com.app.fastlane"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "156510197782-t5hmsd0eprv10dvga2r66g4743nophkm.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.myfastlaneapp",
+            "package_name": "com.app.fastlane",
             "certificate_hash": "8408bbe838bc5b3ed7b8bead38c891251916e936"
           }
         },
